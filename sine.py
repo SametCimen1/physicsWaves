@@ -4,9 +4,6 @@ import numpy as np
 # 100 linearly spaced numbers
 x = np.linspace(-4,4,200)
 
-p = np.sin(x) # y = sin(x)
-q = np.sin(5*x) # y = sin(2x)
-# r = np.sin(3*x) # y = sin(3x)
 
 
 # setting the axes at the center
@@ -20,9 +17,15 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
 # plot the functions, with labels
+p = np.sin(x) 
+# q = np.sin(5*x) 
+# u = 3 * np.sin(10*x) #green wave
+# r = np.sin(2*x-2)+1
+
 plt.plot(x,p, 'b-', label='y=sin(x)')
-plt.plot(x,q, 'c-', label='y=sin(5x)')
-# plt.plot(x,r, 'm-', label='y=sin(3x)')
+# plt.plot(x,q, 'c-', label='y=sin(5x)')
+# plt.plot(x,u, 'g-', label='y=3sin(x)')
+# plt.plot(x,r, 'r-', label='y=sin(2x-2)+1')
 
 plt.legend(loc='upper left')
 
